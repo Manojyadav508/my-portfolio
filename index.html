@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MANOJ YADAV K N | Portfolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">MyPortfolio</h1>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button id="darkModeToggle">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="/assets/profile.jpg.jpg" alt="Profile" class="profile-img" />
+
+      <h2>Hello, I'm <span>MANOJ YADAV K N</span></h2>
+
+      <p id="typing"></p>
+
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About Me</h2>
+
+    <p>
+  I am a passionate aspiring software developer focused on creating modern,
+  responsive, and user-friendly web applications. I enjoy learning new
+  technologies and improving my skills through real-world projects and
+  continuous practice. My goal is to build impactful digital experiences
+  while growing as a full-stack developer.
+</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section" data-aos="zoom-in">
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">GitHub</div>
+      <div class="skill-card">Responsive Design</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section" data-aos="fade-right">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project-card">
+        <img src="assets/project" alt="Project" />
+
+        <h3>Portfolio Website</h3>
+
+        <p>
+          A responsive personal portfolio website built using HTML, CSS,
+          and JavaScript.
+        </p>
+
+        <a href="#" class="project-btn">Live Demo</a>
+      </div>
+
+      <div class="project-card">
+        <img src="assets/project 1" alt="Project" />
+
+        <h3>To-Do App</h3>
+
+        <p>
+          A task management app with add, delete, and save features.
+        </p>
+
+        <a href="#" class="project-btn">Live Demo</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <!-- CONTACT -->
+<section id="contact" class="section" data-aos="fade-left">
+
+  <h2>Contact Me</h2>
+
+  <p class="contact-text">
+    Feel free to connect with me through social platforms.
+  </p>
+
+  <div class="social-icons">
+
+    <!-- EMAIL -->
+    <a
+      href="mailto:mayayadav02012002@gmail.com?subject=Portfolio Contact&body=Hello, I visited your portfolio website."
+      target="_blank"
+      class="social-icon"
+    >
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+
+    <!-- INSTAGRAM -->
+    <a
+      href="https://instagram.com/maya_the_bad_captian?igshid=cDlmcDdpNHBl2J2"
+      target="_blank"
+      class="social-icon"
+    >
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <!-- WHATSAPP -->
+    <a
+      href="https://wa.me/+917013387973?text=Hello%20I%20visited%20your%20portfolio%20website"
+      target="_blank"
+      class="social-icon"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- LINKEDIN -->
+    <a
+      href="https://ln.run/mr09z"
+      target="_blank"
+      class="social-icon"
+    >
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+  </div>
+
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 MANOJ YADAV K N. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
+</script>
+
+</body>
+</html>
