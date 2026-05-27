@@ -94,6 +94,9 @@
     <h1>
       Hi, I'm <span>MANOJ YADAV K N</span>
     </h1>
+    <p class="availability">
+  ● Available for internships & freelance projects
+</p>
 
     <p class="hero-description">
       Building intelligent web applications using
@@ -104,12 +107,20 @@
     <p id="typing"></p>
 
     <div class="hero-buttons">
-      <a href="#projects" class="btn">View Projects</a>
 
-      <a href="Manojresume.pdf" target="_blank" class="btn secondary-btn">
-        Resume
-      </a>
-    </div>
+  <a href="#projects" class="btn">
+    Explore Projects
+  </a>
+
+  <a
+    href="Manojresume.pdf"
+    target="_blank"
+    class="btn secondary-btn"
+  >
+    Download CV
+  </a>
+
+</div>
 
     <div class="hero-socials">
 
@@ -309,6 +320,31 @@ and innovative problem-solving.
   </div>
 
 </section>
+  <!-- EXPERIENCE -->
+
+<section id="experience" class="section" data-aos="fade-up">
+
+  <h2 class="section-title">Experience</h2>
+
+  <div class="experience-card">
+
+    <h3>Machine learning & Deep learning Intern</h3>
+
+    <p>
+      • Developed machine learning models for loan prediction in the banking domain using realworld datasets
+      • Applied ensemble techniques and data balancing methods (SMOTE) to improve model
+        performance
+      • Performed data pre-processing, feature engineering, and model evaluation using key
+        metrics
+      • Gained hands-on experience in end-to-end ML workflow and financial data analysis
+        Developed AI-powered web applications using
+        Machine Learning, Deep Learning,
+        Django, and frontend technologies.
+    </p>
+
+  </div>
+
+</section>
 
  <!-- PROJECTS -->
 <section id="projects" class="section" data-aos="fade-up">
@@ -344,32 +380,7 @@ and innovative problem-solving.
         dashboards, financial simulation, and real-time tracking.
 
       </p>
-      <!-- ACHIEVEMENTS -->
-
-<section class="section achievements-section">
-
-  <h2 class="section-title">Achievements</h2>
-
-  <div class="achievement-container">
-
-    <div class="achievement-card">
-      <h3>2 Academic</h3>
-      <p>Projects Completed</p>
-    </div>
-
-    <div class="achievement-card">
-      <h3>AI/ML</h3>
-      <p>Specialized Projects</p>
-    </div>
-
-    <div class="achievement-card">
-      <h3>100%</h3>
-      <p>Responsive Designs</p>
-    </div>
-
-  </div>
-
-</section>
+      
 
       <!-- TECH STACK -->
 
@@ -453,6 +464,32 @@ and innovative problem-solving.
 
       </div>
 
+    </div>
+
+  </div>
+
+</section>
+  <!-- ACHIEVEMENTS -->
+
+<section class="section achievements-section">
+
+  <h2 class="section-title">Achievements</h2>
+
+  <div class="achievement-container">
+
+    <div class="achievement-card">
+      <h3>2 Academic</h3>
+      <p>Projects Completed</p>
+    </div>
+
+    <div class="achievement-card">
+      <h3>AI/ML</h3>
+      <p>Specialized Projects</p>
+    </div>
+
+    <div class="achievement-card">
+      <h3>100%</h3>
+      <p>Responsive Designs</p>
     </div>
 
   </div>
@@ -565,35 +602,42 @@ and innovative problem-solving.
 
     <div class="contact-form-container">
 
-      <form class="contact-form">
+      <form
+  action="https://formspree.io/f/xlgvaevz"
+  method="POST"
+  class="contact-form"
+>
 
         <div class="input-group">
 
           <input
-            type="text"
-            placeholder="Your Name"
-            required
-          />
+  type="text"
+  name="name"
+  placeholder="Your Name"
+  required
+/>
 
         </div>
 
         <div class="input-group">
 
           <input
-            type="email"
-            placeholder="Your Email"
-            required
-          />
+  type="email"
+  name="email"
+  placeholder="Your Email"
+  required
+/>
 
         </div>
 
         <div class="input-group">
 
           <textarea
-            rows="6"
-            placeholder="Your Message"
-            required
-          ></textarea>
+  rows="6"
+  name="message"
+  placeholder="Your Message"
+  required
+></textarea>
 
         </div>
 
@@ -618,21 +662,48 @@ and innovative problem-solving.
     AI-Powered Full Stack Developer
   </p>
 
-  <div class="footer-socials">
+ <div class="footer-socials">
 
-    <a href="#">
-      <i class="fa-brands fa-github"></i>
-    </a>
+  <!-- GITHUB -->
 
-    <a href="#">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
+  <a
+    href="https://github.com/Manojyadav508"
+    target="_blank"
+    title="GitHub"
+  >
+    <i class="fa-brands fa-github"></i>
+  </a>
 
-    <a href="#">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
+  <!-- LINKEDIN -->
 
-  </div>
+  <a
+    href="https://ln.run/mr09z"
+    target="_blank"
+    title="LinkedIn"
+  >
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+
+  <!-- INSTAGRAM -->
+
+  <a
+    href="https://www.instagram.com/maya_the_bad_captian"
+    target="_blank"
+    title="Instagram"
+  >
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <!-- EMAIL -->
+
+  <a
+    href="mailto:mayayadav02012002@gmail.com"
+    title="Email"
+  >
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+
+</div>
 
   <p class="copyright">
 
@@ -641,7 +712,9 @@ and innovative problem-solving.
   </p>
 
 </footer>
-
+<button id="scrollTopBtn">
+  ↑
+</button>
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -651,9 +724,7 @@ and innovative problem-solving.
     once: true,
   });
 </script>
-  <button id="scrollTopBtn">
-  ↑
-</button>
+  
 
 </body>
 </html>
