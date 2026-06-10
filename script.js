@@ -225,3 +225,12 @@ console.log(
   "%cWelcome to Manoj's Portfolio 🚀",
   "color:#3b82f6; font-size:16px; font-weight:bold;"
 );
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function () {
+        this.style.transform = 'scale(0.95)';
+
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 150);
+    });
+});
