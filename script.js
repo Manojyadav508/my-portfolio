@@ -1,236 +1,139 @@
-// =========================
-// DARK MODE TOGGLE
-// =========================
+/* =========================================
+   AOS ANIMATION
+========================================= */
 
-const darkModeToggle =
-  document.getElementById("darkModeToggle");
-
-darkModeToggle.addEventListener("click", () => {
-
-  document.body.classList.toggle("dark-mode");
-
-  // SAVE THEME IN LOCAL STORAGE
-
-  if (
-    document.body.classList.contains("dark-mode")
-  ) {
-
-    localStorage.setItem("theme", "dark");
-
-  } else {
-
-    localStorage.setItem("theme", "light");
-  }
+AOS.init({
+  duration: 1000,
+  once: true,
 });
 
-// LOAD SAVED THEME
+/* =========================================
+   TYPING EFFECT
+========================================= */
 
-window.onload = () => {
-
-  if (
-    localStorage.getItem("theme") === "dark"
-  ) {
-
-    document.body.classList.add("dark-mode");
-  }
-
-  // START TYPING EFFECT
-
-  typeEffect();
-};
-
-// =========================
-// TYPING EFFECT
-// =========================
+const typingElement = document.getElementById("typing");
 
 const text =
-  "Machine Learning Enthusiast | Full Stack Developer | AI Engineer";
+  "Machine Learning • Deep Learning • Full Stack Development • AI Solutions";
 
 let index = 0;
 
-function typeEffect() {
+function typeWriter() {
+  if (!typingElement) return;
 
   if (index < text.length) {
-
-    document.getElementById("typing")
-      .innerHTML += text.charAt(index);
-
+    typingElement.innerHTML += text.charAt(index);
     index++;
-
-    setTimeout(typeEffect, 70);
+    setTimeout(typeWriter, 60);
   }
 }
 
-// =========================
-// SCROLL TO TOP BUTTON
-// =========================
+window.addEventListener("load", () => {
+  typeWriter();
+});
 
-const scrollBtn =
-  document.getElementById("scrollTopBtn");
+/* =========================================
+   SCROLL TO TOP BUTTON
+========================================= */
+
+const scrollBtn = document.getElementById("scrollTopBtn");
 
 window.addEventListener("scroll", () => {
+  if (!scrollBtn) return;
 
   if (window.scrollY > 300) {
-
     scrollBtn.style.display = "flex";
-
   } else {
-
     scrollBtn.style.display = "none";
   }
 });
 
-// SMOOTH SCROLL TO TOP
-
-scrollBtn.addEventListener("click", () => {
-
-  window.scrollTo({
-
-    top: 0,
-
-    behavior: "smooth"
+if (scrollBtn) {
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   });
-});
+}
 
-// =========================
-// ACTIVE NAVBAR LINK
-// =========================
+/* =========================================
+   ACTIVE NAVBAR LINK
+========================================= */
 
-const sections =
-  document.querySelectorAll("section");
-
-const navLinks =
-  document.querySelectorAll(".nav-links a");
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
-
   let current = "";
 
-  sections.forEach(section => {
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 150;
 
-    const sectionTop =
-      section.offsetTop - 150;
-
-    const sectionHeight =
-      section.clientHeight;
-
-    if (
-      window.scrollY >= sectionTop
-      &&
-      window.scrollY <
-      sectionTop + sectionHeight
-    ) {
-
+    if (window.scrollY >= sectionTop) {
       current = section.getAttribute("id");
     }
   });
 
-  navLinks.forEach(link => {
-
+  navLinks.forEach((link) => {
     link.classList.remove("active");
 
-    if (
-      link.getAttribute("href")
-      === `#${current}`
-    ) {
-
+    if (link.getAttribute("href") === "#" + current) {
       link.classList.add("active");
     }
   });
 });
 
-// =========================
-// HERO IMAGE PARALLAX EFFECT
-// =========================
+/* =========================================
+   DARK MODE TOGGLE
+========================================= */
 
-const profileImage =
-  document.querySelector(".profile-img");
+const darkModeToggle = document.getElementById("darkModeToggle");
 
-window.addEventListener("mousemove", (e) => {
+if (darkModeToggle) {
+  darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
 
-  const x =
-    (window.innerWidth / 2 - e.pageX) / 40;
+    const icon = darkModeToggle.querySelector("i");
 
-  const y =
-    (window.innerHeight / 2 - e.pageY) / 40;
+    if (document.body.classList.contains("light-mode")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+    }
+  });
+}
 
-  profileImage.style.transform =
-    `translate(${x}px, ${y}px)`;
-});
+/* =========================================
+   BUTTON HOVER ANIMATION
+========================================= */
 
-// =========================
-// BUTTON RIPPLE EFFECT
-// =========================
+const buttons = document.querySelectorAll(
+  ".hero-btn, .project-btn, .contact-btn"
+);
 
-const buttons =
-  document.querySelectorAll(".btn");
-
-buttons.forEach(button => {
-
+buttons.forEach((button) => {
   button.addEventListener("mouseenter", () => {
-
-    button.style.transform =
-      "translateY(-5px) scale(1.03)";
+    button.style.transform = "translateY(-3px)";
   });
 
   button.addEventListener("mouseleave", () => {
-
-    button.style.transform =
-      "translateY(0px) scale(1)";
+    button.style.transform = "";
   });
 });
 
-// =========================
-// PROJECT CARD HOVER GLOW
-// =========================
+/* =========================================
+   CONTACT FORM SUCCESS MESSAGE
+========================================= */
 
-const projectCards =
-  document.querySelectorAll(".project-card");
+const contactForm = document.querySelector(".contact-form");
 
-projectCards.forEach(card => {
-
-  card.addEventListener("mousemove", (e) => {
-
-    const rect =
-      card.getBoundingClientRect();
-
-    const x =
-      e.clientX - rect.left;
-
-    const y =
-      e.clientY - rect.top;
-
-    card.style.background =
-      `
-      radial-gradient(
-        circle at ${x}px ${y}px,
-        rgba(59,130,246,0.18),
-        rgba(255,255,255,0.05)
-      )
-      `;
+if (contactForm) {
+  contactForm.addEventListener("submit", () => {
+    setTimeout(() => {
+      alert("Message sent successfully!");
+    }, 500);
   });
-
-  card.addEventListener("mouseleave", () => {
-
-    card.style.background =
-      "rgba(255,255,255,0.08)";
-  });
-});
-
-// =========================
-// CONSOLE MESSAGE
-// =========================
-
-console.log(
-  "%cWelcome to Manoj's Portfolio 🚀",
-  "color:#3b82f6; font-size:16px; font-weight:bold;"
-);
-document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', function () {
-        this.style.transform = 'scale(0.95)';
-
-        setTimeout(() => {
-            this.style.transform = '';
-        }, 150);
-    });
-});
+}
