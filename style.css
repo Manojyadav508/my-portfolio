@@ -392,3 +392,39 @@ width:260px;
 height:260px
 }
 }
+/* =========================================
+   LIGHT MODE
+========================================= */
+
+body.light-mode{
+  background:#f8fafc;
+  color:#111827;
+}
+
+body.light-mode .navbar{
+  background:rgba(255,255,255,.85);
+}
+
+body.light-mode .nav-links a{
+  color:#111827;
+}
+
+body.light-mode .section,
+body.light-mode p,
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4{
+  color:#111827;
+}
+
+body.light-mode .skill-card,
+body.light-mode .stack-item,
+body.light-mode .project-card,
+body.light-mode .education-card,
+body.light-mode .experience-card,
+body.light-mode .achievement-card,
+body.light-mode .contact-card,
+body.light-mode .contact-form-container{
+  background:rgba(255,255,255,.9);
+}
